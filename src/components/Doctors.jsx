@@ -31,7 +31,7 @@ const Doctors = () => {
 
   return (
     <section className="bg-dark  p-8">
-      <h2 className="text-2xl font-bold mb-4">Our Doctors</h2>
+      <h2 className="text-2xl font-bold mb-4 dark:text-white">Our Doctors</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         {doctorsData.map((doctor) => (
           <div key={doctor.id} className="bg-gray-800 p-4 rounded-lg">

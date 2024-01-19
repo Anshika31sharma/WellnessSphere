@@ -2,9 +2,9 @@ import React from 'react';
 
 function BookingForm() {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row mt-9 ">
     <section className="bg-white text-black p-4 md:p-10 ml-4 md:ml-8 rounded-lg shadow-lg max-w-xl mx-auto md:w-1/2">
-        <h2 className="text-2xl font-bold mb-4">Book a Consultation</h2>
+        <h2 className="text-2xl font-bold mb-4 ">Book a Consultation</h2>
         <form>
         <div className="mb-4 ">
           <label htmlFor="name" className="block text-sm  font-bold mb-2 text-black">Name:</label>

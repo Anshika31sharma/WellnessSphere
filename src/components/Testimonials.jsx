@@ -3,7 +3,7 @@ import React from 'react';
 function Testimonials() {
   return ( 
     <div>
-      <h2 className="text-2xl font-bold mb-4 ml-8">What Our Patients Say</h2>
+      <h2 className="text-2xl font-bold mb-4 ml-8 dark:text-white">What Our Patients Say</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
         <div className="h-96 bg-white w-full md:w-96 shadow-lg mt-10 mx-auto">
           <img
