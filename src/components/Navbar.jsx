@@ -5,7 +5,7 @@ const Navbar = ({ toggleDarkMode }) => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-4xl font-semibold font-fancy">
+        <h1 className="text-white text-4xl font-extrabold ">
          Fix Health App
         </h1>
         <button
