@@ -8,36 +8,23 @@ const Doctors = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://hospitaldata.free.beeceptor.com/list');
-        const text = await response.text();
-        console.log('Raw response:', text);
-  
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-  
+        const response = await fetch('https://doctorsdata.free.beeceptor.com/list');
         const data = await response.json();
-        console.log('Fetched data:', data);
         setDoctorsData(data);
       } catch (error) {
-        console.error('Error fetching doctor data:', error.message);
+        console.error('Error fetching doctor data:', error);
       }
     };
-  
-    fetchData();
-  }, [urlParamCity]);
-  
 
+    fetchData();
+  }, []);
   const filterDoctorsByCity = (city) => {
     return doctorsData.filter((doctor) => doctor.city.toLowerCase() === city.toLowerCase());
   };
-
-  if (!urlParamCity || !doctorsData.length) {
+  if (!urlParamCity) {
     return (
       <section className="bg-dark p-8">
-        <h2 className="text-2xl font-bold mb-4 dark:text-white">
-          {urlParamCity ? 'Loading doctors...' : 'Please specify a city in the URL parameter.'}
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 dark:text-white">Please specify a city in the URL parameter.</h2>
       </section>
     );
   }
@@ -53,7 +40,7 @@ const Doctors = () => {
             <img
               src={doctor.photo}
               alt={`Dr. ${doctor.name}`}
-              className="w-full h-auto object-cover mb-4 rounded-lg"
+              className=" h-72 w-80 object-cover mb-4 rounded-lg"
             />
             <h3 className="text-2xl font-extrabold mb-2">{doctor.name}</h3>
             <p className="text-lg mb-2 font-bold">Expertise: {doctor.expertise}</p>
